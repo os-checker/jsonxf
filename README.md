@@ -41,7 +41,7 @@ In your `Cargo.toml`:
 
 ```
 [dependencies]
-jsonxf = "1.1"
+jsonxf = { version = "1.1.2", default-features = false }
 ```
 
 In your code:
@@ -50,7 +50,7 @@ In your code:
 extern crate jsonxf;
 let ugly_json = "{\"hello\":\"world\"}";
 let pretty_json = jsonxf::pretty_print(ugly_json).unwrap();
-assert_eq!(pretty_json, "{\n  \"hello\": \"world\"\n}\n");
+assert_eq!(pretty_json, "{\n  \"hello\": \"world\"\n}");
 ```
 
 
