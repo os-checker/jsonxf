@@ -1,5 +1,6 @@
 [package]
 name = "jsonxf"
+edition = "2018"
 version = "1.1.1"
 authors = ["pete gamache <pete@gamache.org>"]
 description = "A fast JSON pretty-printer and minimizer."
@@ -10,8 +11,11 @@ categories = ["encoding", "rendering", "text-processing", "value-formatting"]
 license = "MIT"
 
 [dependencies]
-getopts = "0.2"
-memchr = "2.3.4"
+getopts = { version = "0.2", optional = true }
+memchr = "2.7.4"
+
+[features]
+default = ["dep:getopts"]
 
 [lib]
 name = "jsonxf"
